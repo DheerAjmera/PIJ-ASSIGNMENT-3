@@ -75,5 +75,16 @@ public class StudentManagement {
         System.out.println("Student not found.");
     }
 
+    // Search student by position in the list
+    public void searchByPosition() {
+        System.out.print("Enter position (index starting from 0): ");
+        int index = scanner.nextInt();
+        if (index >= 0 && index < students.size()) {
+            students.get(index).displayStudent();
+        } else {
+            System.out.println("Invalid position.");
+        }
+    }
+
 
      
