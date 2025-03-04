@@ -47,3 +47,16 @@ public class StudentManagement {
             }
         }
     }
+
+    // Search student by PRN
+    public void searchByPRN() {
+        System.out.print("Enter PRN to search: ");
+        String prn = scanner.next();
+        for (Student student : students) {
+            if (student.getPRN().equals(prn)) {
+                student.displayStudent();
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
