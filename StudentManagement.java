@@ -13,3 +13,26 @@ public class StudentManagement {
         students = new ArrayList<>();
         scanner = new Scanner(System.in);
     }
+    
+    // Method to add a new student
+    public void addStudent() {
+        System.out.print("Enter PRN: ");
+        String prn = scanner.next();
+
+        System.out.print("Enter Name: ");
+        scanner.nextLine(); // Consume newline
+        String name = scanner.nextLine();
+
+        System.out.print("Enter Date of Birth (dd/MM/yyyy): ");
+        String dobStr = scanner.next();
+        System.out.print("Enter Marks: ");
+        double marks = scanner.nextDouble();
+
+        try {
+            Student student = new Student(prn, name, dateFormat.parse(dobStr), marks);
+            students.add(student);
+            System.out.println("Student added successfully!");
+        } catch (ParseException e) {
+            System.out.println("Invalid date format. Use dd/MM/yyyy.");
+        }
+    }
