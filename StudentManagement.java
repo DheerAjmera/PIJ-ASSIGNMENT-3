@@ -60,3 +60,20 @@ public class StudentManagement {
         }
         System.out.println("Student not found.");
     }
+
+    // Search student by Name
+    public void searchByName() {
+        System.out.print("Enter Name to search: ");
+        scanner.nextLine(); // Consume newline
+        String name = scanner.nextLine();
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                student.displayStudent();
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
+
+     
