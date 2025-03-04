@@ -86,5 +86,40 @@ public class StudentManagement {
         }
     }
 
+    // Update student details
+    public void updateStudent() {
+        System.out.print("Enter PRN to update: ");
+        String prn = scanner.next();
+        for (Student student : students) {
+            if (student.getPRN().equals(prn)) {
+                System.out.print("Enter new Name: ");
+                scanner.nextLine();
+                String name = scanner.nextLine();
+                System.out.print("Enter new Marks: ");
+                double marks = scanner.nextDouble();
+                student.setName(name);
+                student.setMarks(marks);
+                System.out.println("Student details updated.");
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
+    // Delete student by PRN
+    public void deleteStudent() {
+        System.out.print("Enter PRN to delete: ");
+        String prn = scanner.next();
+        for (Student student : students) {
+            if (student.getPRN().equals(prn)) {
+                students.remove(student);
+                System.out.println("Student removed.");
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+}
+
 
      
