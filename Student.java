@@ -25,4 +25,10 @@ public class Student {
 
     public double getMarks() { return marks; }
     public void setMarks(double marks) { this.marks = marks; }
+
+    // Method to display student details
+    public void displayStudent() {
+        System.out.println("PRN: " + prn + ", Name: " + name + ", DOB: " + dob + ", Marks: " + marks);
+    }
+}
     
