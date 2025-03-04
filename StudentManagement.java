@@ -36,3 +36,14 @@ public class StudentManagement {
             System.out.println("Invalid date format. Use dd/MM/yyyy.");
         }
     }
+    
+    // Method to display all students
+    public void displayAllStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            for (Student student : students) {
+                student.displayStudent();
+            }
+        }
+    }
