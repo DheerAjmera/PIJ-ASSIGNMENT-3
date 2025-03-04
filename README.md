@@ -4,8 +4,8 @@ A menu-driven Java application that demonstrates classes, objects, constructors,
 
 This program allows users to manage student records by performing operations like adding, displaying, searching, updating, and deleting student details.
 
-## Student Management System (Java)
-# Project Description
+# Student Management System (Java)
+##  Project Description
 This is a menu-driven Java program that allows users to manage student records efficiently. The system provides functionality to:
 
 - Add a student
